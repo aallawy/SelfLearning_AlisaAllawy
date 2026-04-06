@@ -189,46 +189,7 @@ ScrollTrigger.refresh();
 // ENHANCED ANIMATIONS - ADDITIONAL EFFECTS
 // ========================================
 
-// Parallax effect on hero section with mouse movement
-window.addEventListener('mousemove', (e) => {
-    const heroVisual = document.querySelector('.hero-visual');
-    if (heroVisual) {
-        const x = (e.clientX / window.innerWidth) * 20 - 10;
-        const y = (e.clientY / window.innerHeight) * 20 - 10;
-        gsap.to(heroVisual, {
-            x: x,
-            y: y,
-            duration: 0.5,
-            ease: 'power2.out',
-            overwrite: 'auto'
-        });
-    }
-});
-
-// Animated background circles with parallax on scroll
-gsap.to('.hero::before', {
-    scrollTrigger: {
-        trigger: '.hero',
-        start: 'top top',
-        end: 'bottom center',
-        scrub: 1,
-        markers: false
-    },
-    y: -100,
-    ease: 'none'
-});
-
-gsap.to('.hero::after', {
-    scrollTrigger: {
-        trigger: '.hero',
-        start: 'top top',
-        end: 'bottom center',
-        scrub: 1,
-        markers: false
-    },
-    y: 100,
-    ease: 'none'
-});
+// Hero image animations removed - static display only
 
 // Enhanced feature card animations with flip effect
 featureCards.forEach((card, index) => {

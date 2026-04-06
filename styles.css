@@ -167,38 +167,14 @@ section {
     flex-wrap: wrap;
 }
 
-.hero-visual {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, var(--cream) 0%, var(--light-bg) 100%);
-}
-
-.hero-visual-circle {
+.hero-image {
     position: absolute;
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(135deg, rgba(201, 122, 92, 0.2), rgba(155, 168, 155, 0.2));
-    border-radius: 50%;
-    filter: blur(80px);
-    z-index: 1;
-}
-
-.hero-product {
-    position: relative;
-    z-index: 5;
-    width: 100%;
+    top: 0;
+    right: 0;
+    width: 50%;
     height: 100%;
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: none;
     object-fit: cover;
-    overflow: hidden;
+    z-index: 5;
 }
 
 /* Decorative background circles */
