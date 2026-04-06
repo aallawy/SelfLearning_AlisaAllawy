@@ -315,3 +315,215 @@ paragraphs.forEach((para, index) => {
         });
     }
 });
+
+
+// ========================================
+// PRODUCTS SECTION - SCROLL TRIGGER ANIMATION
+// ========================================
+const productCards = document.querySelectorAll('.product-card');
+productCards.forEach((card, index) => {
+    gsap.set(card, { opacity: 0, y: 40 });
+    gsap.to(card, {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: 'power2.out',
+        delay: index * 0.1,
+        scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            end: 'top 15%',
+            scrub: false,
+            markers: false
+        }
+    });
+});
+
+// Product card hover effects
+productCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+            scale: 1.05,
+            boxShadow: '0 20px 40px rgba(201, 122, 92, 0.2)',
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+            scale: 1,
+            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+});
+
+// ========================================
+// REVIEWS SECTION - SCROLL TRIGGER ANIMATION
+// ========================================
+const reviewCards = document.querySelectorAll('.review-card');
+reviewCards.forEach((card, index) => {
+    gsap.set(card, { opacity: 0, x: index % 2 === 0 ? -40 : 40 });
+    gsap.to(card, {
+        opacity: 1,
+        x: 0,
+        duration: 0.6,
+        ease: 'power2.out',
+        delay: index * 0.1,
+        scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            end: 'top 15%',
+            scrub: false,
+            markers: false
+        }
+    });
+});
+
+// Review card hover effects
+reviewCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+            scale: 1.03,
+            boxShadow: '0 15px 35px rgba(0, 0, 0, 0.12)',
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+            scale: 1,
+            boxShadow: '0 8px 25px rgba(0, 0, 0, 0.1)',
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+});
+
+// ========================================
+// BLOG SECTION - SCROLL TRIGGER ANIMATION
+// ========================================
+const blogCards = document.querySelectorAll('.blog-card');
+blogCards.forEach((card, index) => {
+    gsap.set(card, { opacity: 0, y: 40, rotation: -2 });
+    gsap.to(card, {
+        opacity: 1,
+        y: 0,
+        rotation: 0,
+        duration: 0.6,
+        ease: 'power2.out',
+        delay: index * 0.1,
+        scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            end: 'top 15%',
+            scrub: false,
+            markers: false
+        }
+    });
+});
+
+// Blog card hover effects
+blogCards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        gsap.to(card, {
+            scale: 1.05,
+            boxShadow: '0 20px 40px rgba(0, 0, 0, 0.15)',
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+
+    card.addEventListener('mouseleave', () => {
+        gsap.to(card, {
+            scale: 1,
+            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08)',
+            duration: 0.3,
+            ease: 'power2.out'
+        });
+    });
+});
+
+// ========================================
+// CONTACT SECTION - SCROLL TRIGGER ANIMATION
+// ========================================
+const contactForm = document.querySelector('.contact-form');
+const contactInfo = document.querySelector('.contact-info');
+
+if (contactForm) {
+    gsap.set(contactForm, { opacity: 0, x: -40 });
+    gsap.to(contactForm, {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: '.contact',
+            start: 'top 80%',
+            end: 'top 20%',
+            scrub: false,
+            markers: false
+        }
+    });
+}
+
+if (contactInfo) {
+    gsap.set(contactInfo, { opacity: 0, x: 40 });
+    gsap.to(contactInfo, {
+        opacity: 1,
+        x: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        delay: 0.2,
+        scrollTrigger: {
+            trigger: '.contact',
+            start: 'top 80%',
+            end: 'top 20%',
+            scrub: false,
+            markers: false
+        }
+    });
+}
+
+// Form input focus animations
+const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
+formInputs.forEach(input => {
+    input.addEventListener('focus', () => {
+        gsap.to(input, {
+            boxShadow: '0 0 0 3px rgba(201, 122, 92, 0.2)',
+            duration: 0.2,
+            ease: 'power2.out'
+        });
+    });
+
+    input.addEventListener('blur', () => {
+        gsap.to(input, {
+            boxShadow: '0 0 0 0px rgba(201, 122, 92, 0)',
+            duration: 0.2,
+            ease: 'power2.out'
+        });
+    });
+});
+
+// Animate info items with stagger
+const infoItems = document.querySelectorAll('.info-item');
+infoItems.forEach((item, index) => {
+    gsap.set(item, { opacity: 0, y: 20 });
+    gsap.to(item, {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        ease: 'power2.out',
+        delay: 0.4 + index * 0.1,
+        scrollTrigger: {
+            trigger: '.contact',
+            start: 'top 80%',
+            end: 'top 20%',
+            scrub: false,
+            markers: false
+        }
+    });
+});
