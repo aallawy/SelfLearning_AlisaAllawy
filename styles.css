@@ -400,6 +400,120 @@ section {
 }
 
 /* ========================================
+   ANIMATIONS & KEYFRAMES
+   ======================================== */
+
+/* Floating animation for hero product */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Rotating animation for background circles */
+@keyframes rotate-slow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pulsing animation for CTA button */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(201, 122, 92, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(201, 122, 92, 0);
+    }
+}
+
+/* Bounce animation for buttons */
+@keyframes bounce-in {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Flip animation for cards */
+@keyframes flip-card {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(10deg);
+    }
+}
+
+/* Shimmer animation for icons */
+@keyframes shimmer {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.6;
+    }
+}
+
+/* Wave animation for staggered entrance */
+@keyframes wave-in {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animated checkmark */
+@keyframes checkmark-bounce {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Apply floating animation to hero product */
+.hero-product {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Apply rotating animation to background circles */
+.hero-visual-circle {
+    animation: rotate-slow 20s linear infinite;
+}
+
+/* Apply pulse animation to CTA button */
+.cta .btn-white {
+    animation: pulse-glow 2s infinite;
+}
+
+/* Apply shimmer to feature icons */
+.feature-icon {
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+/* ========================================
    RESPONSIVE DESIGN
    ======================================== */
 @media (max-width: 768px) {
