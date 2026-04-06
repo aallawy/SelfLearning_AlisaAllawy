@@ -4,12 +4,13 @@
 // This file contains all GSAP animations for the landing page
 // Including timeline sequencing, ScrollTrigger, and hover effects
 
-// Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+document.addEventListener('DOMContentLoaded', () => {
+    // Register ScrollTrigger plugin
+    gsap.registerPlugin(ScrollTrigger);
 
-// ========================================
-// HERO SECTION - TIMELINE ANIMATION
-// ========================================
+    // ========================================
+    // HERO SECTION - TIMELINE ANIMATION
+    // ========================================
 // Demonstrates GSAP timeline with staggered animations
 // Elements fade in and slide up from bottom in sequence
 
@@ -526,4 +527,6 @@ infoItems.forEach((item, index) => {
             markers: false
         }
     });
+});
+
 });
