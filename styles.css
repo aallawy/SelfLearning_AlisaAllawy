@@ -644,6 +644,34 @@ section {
     margin: 0.5rem 0 1rem 0;
 }
 
+/* Hidden products for "Shop More" functionality */
+.product-card.hidden {
+    display: none;
+}
+
+/* Shop More button */
+.shop-more-btn {
+    display: block;
+    margin: 2rem auto 0;
+    padding: 1rem 2rem;
+    background: var(--sage-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.shop-more-btn:hover {
+    background: var(--terracotta);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(201, 122, 92, 0.3);
+}
+
 /* ========================================
    REVIEWS SECTION
    ======================================== */
