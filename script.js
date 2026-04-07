@@ -449,57 +449,6 @@ blogCards.forEach(card => {
 });
 
 // ========================================
-// SHOP MORE FUNCTIONALITY
-// ========================================
-const shopMoreBtn = document.getElementById('shop-more-btn');
-const hiddenProducts = document.querySelectorAll('.product-card.hidden');
-
-if (shopMoreBtn) {
-    // Ensure products are hidden initially
-    hiddenProducts.forEach(product => {
-        product.style.display = 'none';
-    });
-    
-    shopMoreBtn.addEventListener('click', () => {
-        const isExpanded = shopMoreBtn.textContent === 'Show Less';
-        
-        if (isExpanded) {
-            // Hide products
-            hiddenProducts.forEach((product, index) => {
-                gsap.to(product, {
-                    opacity: 0,
-                    scale: 0.8,
-                    duration: 0.3,
-                    ease: 'power2.out',
-                    delay: index * 0.05,
-                    onComplete: () => {
-                        product.style.display = 'none';
-                    }
-                });
-            });
-            shopMoreBtn.textContent = 'Shop More';
-        } else {
-            // Show products
-            hiddenProducts.forEach((product, index) => {
-                product.style.display = 'block';
-                gsap.fromTo(product, 
-                    { opacity: 0, scale: 0.8, y: 20 },
-                    {
-                        opacity: 1,
-                        scale: 1,
-                        y: 0,
-                        duration: 0.4,
-                        ease: 'power2.out',
-                        delay: index * 0.1
-                    }
-                );
-            });
-            shopMoreBtn.textContent = 'Show Less';
-        }
-    });
-}
-
-// ========================================
 // CONTACT SECTION - SCROLL TRIGGER ANIMATION
 // ========================================
 const contactForm = document.querySelector('.contact-form');
