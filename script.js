@@ -197,8 +197,8 @@ featureCards.forEach((card, index) => {
     // Add flip effect on hover
     card.addEventListener('mouseenter', () => {
         gsap.to(card, {
-            rotationY: 15,
-            duration: 0.6,
+            rotationY: 25,
+            duration: 0.8,
             ease: 'power2.out'
         });
     });
