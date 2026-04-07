@@ -23,7 +23,6 @@ body {
     background-color: #F5F1E8;
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 100px !important;
 }
 
 /* ========================================
@@ -39,56 +38,47 @@ body {
 }
 
 /* ========================================
-   FIXED HEADER & NAVIGATION
+   HERO NAVIGATION (Inside Hero Section)
    ======================================== */
-.fixed-header {
-    position: fixed;
+.hero-navbar {
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 0 4rem;
-    background: transparent;
-    backdrop-filter: none;
-    z-index: 1000;
-    box-shadow: none;
-    border-bottom: none;
+    justify-content: space-between;
+    padding: 1.5rem 4rem;
+    z-index: 100;
 }
 
 .company-name {
     font-family: 'Playfair Display', serif;
-    font-size: 2rem;
-    font-weight: 400;
-    color: black;
-    letter-spacing: 1.5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    letter-spacing: 1px;
     text-transform: capitalize;
     font-style: normal;
-    position: absolute;
-    left: 4rem;
 }
 
-.navbar {
+.navbar-links {
     display: flex;
-    gap: 4rem;
+    gap: 2.5rem;
     align-items: center;
-    justify-content: center;
 }
 
 .nav-link {
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
     font-weight: 400;
-    color: black;
+    color: white;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
     text-transform: capitalize;
     letter-spacing: 0.5px;
-    padding: 10px 0;
-    border-radius: 0;
+    padding: 8px 0;
 }
 
 .nav-link:hover {
@@ -111,8 +101,6 @@ body {
 .nav-link:hover::after {
     width: 100%;
 }
-
-/* Adjust body padding to account for fixed header - handled above */
 
 /* ========================================
    TYPOGRAPHY
@@ -209,19 +197,31 @@ section {
    ======================================== */
 .hero {
     min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(135deg, var(--cream) 0%, var(--cream) 50%, var(--light-bg) 100%);
     overflow: hidden;
     position: relative;
 }
 
+/* Opaque overlay on hero image for text readability */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 6;
+}
+
 .hero-content-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 2rem;
+    width: 50%;
+    flex: 1;
     z-index: 10;
 }
 
@@ -236,12 +236,14 @@ section {
 
 .hero-text h1 {
     margin-bottom: 1.5rem;
+    color: white;
 }
 
 .hero-text p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
     max-width: 500px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .hero-buttons {
@@ -254,7 +256,7 @@ section {
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: 5;

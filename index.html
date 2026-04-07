@@ -13,19 +13,17 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 <body>
-    <!-- FIXED HEADER -->
-    <header class="fixed-header">
-        <div class="company-name">Curl & Bloom</div>
-        <nav class="navbar">
-            <a href="#home" class="nav-link">Home</a>
-            <a href="#features" class="nav-link">Products</a>
-            <a href="#blog" class="nav-link">Flower Blog</a>
-            <a href="#contact" class="nav-link">Contact</a>
-        </nav>
-    </header>
-
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero" id="home">
+        <nav class="hero-navbar">
+            <div class="company-name">Curl & Bloom</div>
+            <div class="navbar-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Products</a>
+                <a href="#blog" class="nav-link">Flower Blog</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </nav>
         <div class="hero-content-wrapper">
             <div class="container">
                 <div class="hero-content">
@@ -40,6 +38,7 @@
                 </div>
             </div>
         </div>
+        <div class="hero-overlay"></div>
         <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663107738077/UFGy6UZbmrkUQWPUmQbUwB/f06325ba-4f7c-4ee9-ac5c-011da0dbc40b_d39a69d0.avif" alt="Beautiful curly hair" class="hero-image">
         <div class="wave"></div>
     </section>
